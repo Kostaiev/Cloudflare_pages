@@ -1,0 +1,33 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+
+  "name": "lab12-pages",
+
+  "pages_build_output_dir": "./public",
+
+  "compatibility_date": "2026-11-18",
+
+  "vars": {
+    "APP_NAME": "Cloudflare Pages Lab 12",
+    "APP_ENV": "local",
+    "RELEASE": "1.0.0"
+  },
+
+  "env": {
+    "preview": {
+      "vars": {
+        "APP_NAME": "Cloudflare Pages Lab 12",
+        "APP_ENV": "preview",
+        "RELEASE": "1.0.0-preview"
+      }
+    },
+
+    "production": {
+      "vars": {
+        "APP_NAME": "Cloudflare Pages Lab 12",
+        "APP_ENV": "production",
+        "RELEASE": "1.0.0"
+      }
+    }
+  }
+}

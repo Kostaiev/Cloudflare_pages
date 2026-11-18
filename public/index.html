@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    >
+
+    <meta
+      name="description"
+      content="Cloudflare Pages status site"
+    >
+
+    <title>Cloudflare Pages — Lab 12</title>
+
+    <link
+      rel="stylesheet"
+      href="/styles.css"
+    >
+
+    <script
+      type="module"
+      src="/app.js"
+    ></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="hero">
+        <p class="eyebrow">
+          Cloudflare Lab 12
+        </p>
+
+        <h1>
+          Pages deployment status
+        </h1>
+
+        <p class="lead">
+          Static frontend, Git deployment, preview branches and Pages Functions.
+        </p>
+
+        <p class="preview-note">
+          Production version
+        </p>
+      </header>
+
+      <section
+        class="features"
+        aria-label="Possibilities of the project"
+      >
+        <article class="card">
+          <h2>Static hosting</h2>
+
+          <p>
+            HTML, CSS and JavaScript delivered through the global Cloudflare network.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Git deployment</h2>
+
+          <p>
+            Push main updates production, And feature branches create previews.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Pages Function</h2>
+
+          <p>
+            Endpoint /api/status is performed at Cloudflare Workers runtime.
+          </p>
+        </article>
+      </section>
+
+      <section
+        class="status-panel"
+        aria-labelledby="status-heading"
+      >
+        <div class="status-header">
+          <div>
+            <p class="eyebrow">
+              Live API
+            </p>
+
+            <h2 id="status-heading">
+              Runtime status
+            </h2>
+          </div>
+
+          <button
+            id="refresh-button"
+            type="button"
+          >
+            Refresh
+          </button>
+        </div>
+
+        <p
+          id="status-message"
+          class="status-message"
+          aria-live="polite"
+        >
+          Loading…
+        </p>
+
+        <dl class="status-grid">
+          <div>
+            <dt>Status</dt>
+            <dd id="service-status">—</dd>
+          </div>
+
+          <div>
+            <dt>Environment</dt>
+            <dd id="environment">—</dd>
+          </div>
+
+          <div>
+            <dt>Release</dt>
+            <dd id="release">—</dd>
+          </div>
+
+          <div>
+            <dt>Cloudflare colo</dt>
+            <dd id="colo">—</dd>
+          </div>
+
+          <div>
+            <dt>Country</dt>
+            <dd id="country">—</dd>
+          </div>
+
+          <div>
+            <dt>Request ID</dt>
+            <dd id="request-id">—</dd>
+          </div>
+        </dl>
+
+        <details>
+          <summary>
+            Show JSON response
+          </summary>
+
+          <pre id="raw-response">{}</pre>
+        </details>
+      </section>
+
+      <footer>
+        <p>
+          Cloudflare Pages learning project.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
